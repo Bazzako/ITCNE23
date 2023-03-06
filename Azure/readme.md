@@ -14,12 +14,32 @@ You can find it [here.](https://mattruma.com/cheat-sheet-azure-cli/)
 
 Over the manual it's rather simple, everything is clickable and leads you directly to the desired function.
 
-![create_ressource_group](..\..\..\..\..\ITCNE23\ressources\pictures\ressource_creation\create_ressource_group.png)
+Firstly, create a new ressource group.
 
+![create_ressource_group](https://raw.githubusercontent.com/Euthal02/ITCNE23/main/ressources/pictures/ressource_creation/create_ressource_group.png)
+
+Inside this ressource group click create function app.
+This is the shortcut way to create a new WebApp and will use the Ressource Group it is created from.
+
+![create_function_app_inside_ressource_group](https://raw.githubusercontent.com/Euthal02/ITCNE23/main/ressources/pictures/ressource_creation/create_function_app_inside_ressource_group.png)
+
+Be sure to check the ressource group nonetheless.
+It has to be the one we previously created.
+
+![select_correct_ressource_group](https://raw.githubusercontent.com/Euthal02/ITCNE23/main/ressources/pictures/ressource_creation/select_correct_ressource_group.png)
+
+You also have to create a new App Service Plan, you can do this directly from here.
+
+![create_new_app_service_plan](https://raw.githubusercontent.com/Euthal02/ITCNE23/main/ressources/pictures/ressource_creation/create_new_app_service_plan.png)
 
 # With Azure CLI
 
-Firstly, to create a ServiceGroup, issue this command. This creates a new ServiceGroup under the name "myResourceGroupCli".
+Before you can do anything, you have to be logged in.
+This is done interactively with this command:
+
+    az login
+
+Then, to create a ServiceGroup, issue this command. This creates a new ServiceGroup under the name "myResourceGroupCli".
 
     az group create -l eastus -n myResourceGroupCli
 
