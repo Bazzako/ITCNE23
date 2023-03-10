@@ -66,11 +66,11 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
 
 ### Einsatzzweck von Hermes
 
-    HERMES ist eine Projektmanagement-Methode, die in der Schweiz entwickelt wurde und auch in anderen Ländern eingesetzt wird. Die Methode hat ihren Schwerpunkt auf der Durchführung von IT-Projekten, kann aber auch für andere Arten von Projekten angewendet werden.
+HERMES ist eine Projektmanagement-Methode, die in der Schweiz entwickelt wurde und auch in anderen Ländern eingesetzt wird. Die Methode hat ihren Schwerpunkt auf der Durchführung von IT-Projekten, kann aber auch für andere Arten von Projekten angewendet werden.
 
-    Der Einsatzzweck von HERMES besteht darin, eine strukturierte und standardisierte Vorgehensweise für die Planung, Durchführung und Kontrolle von Projekten zu bieten. Durch die klare Definition von Rollen, Verantwortlichkeiten und Prozessen soll sichergestellt werden, dass Projekte effektiv und effizient durchgeführt werden und die Projektziele erreicht werden können. HERMES bietet dabei eine hohe Flexibilität, sodass die Methode je nach Projektart und Projektumfang angepasst werden kann.
+Der Einsatzzweck von HERMES besteht darin, eine strukturierte und standardisierte Vorgehensweise für die Planung, Durchführung und Kontrolle von Projekten zu bieten. Durch die klare Definition von Rollen, Verantwortlichkeiten und Prozessen soll sichergestellt werden, dass Projekte effektiv und effizient durchgeführt werden und die Projektziele erreicht werden können. HERMES bietet dabei eine hohe Flexibilität, sodass die Methode je nach Projektart und Projektumfang angepasst werden kann.
 
-    Insgesamt eignet sich HERMES insbesondere für komplexe Projekte mit vielen Beteiligten und einem hohen Risiko- und Veränderungsmanagementbedarf. HERMES stellt sicher, dass Projekte transparent und nachvollziehbar durchgeführt werden und so ein hoher Projekterfolg erzielt wird.
+Insgesamt eignet sich HERMES insbesondere für komplexe Projekte mit vielen Beteiligten und einem hohen Risiko- und Veränderungsmanagementbedarf. HERMES stellt sicher, dass Projekte transparent und nachvollziehbar durchgeführt werden und so ein hoher Projekterfolg erzielt wird.
 		
 ## Wie geht man mit Hermes vor?
 
