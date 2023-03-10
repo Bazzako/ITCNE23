@@ -93,7 +93,7 @@ Insgesamt eignet sich HERMES insbesondere für komplexe Projekte mit vielen Bete
 
 Mit diese Methode werden Meilensteine abgearbeitet.
 
-![create_ressource_group](https://raw.githubusercontent.com/Bazzako/ITCNE23/main/PRJ/Ressources/Hermes_Klassisch.png)
+![Hermes_Klassisch.png](../../Ressources/Hermes_Klassisch.png)
 
 ### Agil
 
@@ -109,7 +109,7 @@ Mit diese Methode werden Meilensteine abgearbeitet.
 
 Mit dieser Methode wird mit Releases und Releasefreigaben gearbeitet.
 
- ![create_ressource_group](https://raw.githubusercontent.com/Bazzako/ITCNE23/main/PRJ/Ressources/Hermes_Agil.png)
+ ![Hermes_Klassisch.png](../../Ressources/Hermes_Agil.png)
 
 		
 ### Praxisbeispiel
