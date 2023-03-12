@@ -1,46 +1,67 @@
 # Hermes
 
+![Hermes Header](../../ressources/hermes/hermes_header.png)
+
 ## Was ist Hermes?
-    HERMES ist die Projektmanagement-Methode für Projekte im Bereich der Informatik, der Entwicklung von Dienstleistungen und Produkten sowie der Anpassung der Geschäftsorganisation. HERMES unterstützt die Steuerung, Führung und Ausführung von Projekten verschiedener Charakteristiken und Komplexität. HERMES hat eine klare, einfach verständliche Methodenstruktur, ist modular aufgebaut und erweiterbar.
- 
-    HERMES wird von der schweizerischen Bundesverwaltung entwickelt, steht als offener Standard frei zur Verfügung
+Die Projektmanagementmethode "Hermes" ist eine Schweizer Projektmanagmentmethode, die in der öffentlichen Verwaltung sowie in anderen Branchen angewendet werden kann. Der Name steht als Akronym für „Handbuch der Elektronischen Rechenzentren des Bundes, eine Methode zur Entwicklung von Systemen“. 
+
+Sie wurde von der schweizerischen Bundesverwaltung 1975 entwickelt, steht als offener Standard frei zur Verfügung und ist als Standard eCH-0054 vom Verein eCH anerkannt.
+
+Die Methode wird kontinuierlich verbessert und geupdated.
+Der Bund bietet dazu Online sehr viele Informationen an:
+
+https://www.hermes.admin.ch/
+
+---
 
 Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des Projektmanagements abdeckt. Zu den wichtigsten Merkmalen von Hermes gehören: 
 
-1. Phasen: 
+1.  **Strukturierte Phasen:**
 
-    Das HERMES-Phasenmodell für Projekte bildet das Rückgrat jedes Projekts. Es schafft die Voraussetzung für das gemeinsame Verständnis aller Projektbeteiligten. Dies ist eine wichtige Voraussetzung für die erfolgreiche organisationsübergreifende Abwicklung der Projekte.
-    ![create_ressource_group](https://raw.githubusercontent.com/Bazzako/ITCNE23/main/PRJ/Ressources/Hermes_Phasen.png)
+    Hermes teilt das Projekt in Phasen ein, die von der Initialisierung bis zur Umsetzung reichen. Jede Phase wird sorgfältig geplant und dokumentiert, um sicherzustellen, dass das Projekt erfolgreich abgeschlossen wird. Die neuste Hermes Variante unterstützt Phasen für die agile Projektführung, wie auch die klassische Variante.
 
+    ![Phasen](../../ressources/hermes/hermes_phasen.png)
 
-2. Szenarien: 
+    Innerhalb der einzelnen Phasen werden Module eingesetzt, welche einzelne Teilschritte des Projekts darstellen. Phasen stellen den Projektfortschritt dar. Einzelne Module (wie zb. das Standardmodul [Projektführung](https://www.hermes.admin.ch/de/pjm-2022/verstehen/module/projektfuehrung.html)) können dabei in mehreren Phasen auftreten.
 
-    In einer Stammorganisation werden unterschiedliche Projekte durchgeführt. Die Projekte können sich bezüglich ihres Inhalts und der Komplexität stark unterscheiden. Um der Vielfalt der Projekte gerecht zu werden, bietet HERMES-Projektmanagement Szenarien an. Ein Szenario wird im Projekt für das zwischen der Initialisierung und Abschluss eingeschlossene Entwicklungsvorgehen bestimmt, also bei der klassischen Vorgehensweise für die Phasen Konzept, Realisierung und Einführung und bei der agilen Vorgehensweise für die Phase Umsetzung.
+2. **Module:**
 
-3. Module: 
+    Module enthalten thematisch zusammengehörende Aufgaben und Ergebnisse. Sie sind Bausteine zur Erstellung von Projekten und Szenarien. Das Modul Projektführung enthaltet zum Beispiel die Aufgabe 
+    [Qualitätssicherung führen](https://www.hermes.admin.ch/de/pjm-2022/verstehen/aufgaben/qualitaetssicherung-fuehren.html). Aufgaben werden im nächsten Punkt genauer beschrieben. Diese Aufgaben führen immer zu Ergebnissen.
 
-    Module sind wiederverwendbare, den Phasen zugeordnete Bausteine zur Erstellung von Projekten und Szenarien.. Thematisch zusammengehörende Ergebnisse und die mit ihnen verknüpften Aufgaben bilden ein Modul
-     
-4. Ergebnisse: 
-
-    Für jedes Ergebnis gibt es eine Ergebnisbeschreibung. Für alle Dokumente gibt es Dokumentvorlagen, die den in den Ergebnissen aufgeführten Inhalt detaillierter beschreiben. Jedem Ergebnis sind Aufgaben und Rollen zugeordnet. Die Rollen geben einen Hinweis darauf, wie die Verantwortung für Ergebnisse und die Beteiligung bei der Ergebniserstellung geregelt ist.
-
-    HERMES definiert minimal geforderte Dokumente (Ergebnisse), um die Anforderungen an die Projekt-Governance zu erfüllen.
-
-5. Aufgaben: 
+    ![Module](../../ressources/hermes/hermes_module.png)
     
-    Die Aufgaben dienen der Erarbeitung von Ergebnissen. Thematisch zusammengehörende Ergebnisse samt zugeordneten Aufgaben bilden Module.
+    Hermes biete eine Vielzahl von Standardmodulen, welche individuell angepasst werden können, oder sogar durch komplett eigene Module ersetzt werden können.
 
-    Für jede Aufgabe gibt es eine Aufgabenbeschreibung. Sie definiert das generelle Vorgehen und die Aktivitäten, die unternommen werden, um die Ergebnisse zu erarbeiten. Die Rollen geben einen Hinweis darauf, welcher Rolle die Verantwortung für eine Aufgabe zugeordnet ist.
+3. **Aufgaben & Ergebnisse:**
 
-6. Rollen
+    Aufgaben sind bestimmten Rollen zugeteilt und werden immer mit Ergebnissen in Verbindung gebracht. Eine Aufgabe kann mehrere Aktivitäten beinhalten. Aufgaben dienen zur Bündelung in logische Schritte, aus einzelnen Aktivitäten wie zb. *Altsystem oder alte Systemversion ausser Betrieb setzen.* 
+    
+    Verbindet man diese Aktivität nun mit der Aktivität *Altsystem abbauen.*, ergibt dies die **Aufgabe** *Altsystem ausser Betrieb setzen*, mit dem Ergebniss *Altsystem entfernt*
 
-    HERMES-Projektmanagement unterscheidet zwischen den Rollen der Stammorganisation und Rollen der Projektorganisation, beschreibt jedoch ausschliesslich die HERMES-Rollen der Projektorganisation. Für jede Rolle gibt es eine Rollenbeschreibung mit Verantwortung, den Kompetenzen und den benötigten Fähigkeiten sowie mit ihren Beziehungen. Jede Rolle ist einer der Hierarchieebenen Steuerung, Führung oder Ausführung zugeordnet. Es sind unterschiedliche Rollen definiert, die nach Bedarf verwendet werden können.
+    ![Aufgaben und Ergebnisse](../../ressources/hermes/hermes_aufgaben.PNG)
 
+    Ergebnisse sind entweder neue Zustände der Situation, wie im vorherigen Beispiel, oder aber Dokumente, welche vorrausgehend mit einer Vorlage definiert worden sind.
+
+    Diese Dokumente sind zb. Testprotokolle, ein Durchführungsauftrag, eine Studie, eine Checkliste oder eine Prozessbeschreibung. Diese Liste ist nicht abschliessend.
+
+4. **Rollen und Verantwortlichkeiten:** 
+
+    Hermes definiert klare Rollen und Verantwortlichkeiten für alle Projektbeteiligten, einschließlich des Projektmanagers, des Projektteams und der Stakeholder. 
+
+    Jede Aufgabe hat einen Verantwortlichen, mit einer spezifischen Rolle. Dieser Verantwortliche ist dafür zuständig, dass die definierten Ergebnisse erreicht werden. Dazu können aber auch noch andere Rollen miteinbezogen werden, sodass eine bestimmte Aufgabe von mehreren Rollen bearbeitet werden kann.
+
+    ![Multiple Stakeholders](../../ressources/hermes/hermes_mehrere_stakeholder_eine_aufgabe.PNG)
+
+    Hier zum Beispiel sieht man gut, dass der Entwickler dafür verantwortlich ist, dass ein Prototyp realisiert wird. Für diese Aufgabe muss aber der IT-Architekt und der Anwendervertreter miteinbezogen werden, da diese massgeblich dazu beitragen müssen, dass der Prototyp in die jetzige IT-Architektur eingebunden wird (falls möglich) und von den Anwendern geforderte Anforderungen korrekt umgesetzt werden.
+
+    Die einzelnen Rollen werden in einem hierarchischen Rollenmodell definiert. Dieses Modell ist nicht relevant für die Aufgaben / Module, bietet aber eine Übersicht.
+
+    ![Rollenmodell](../../ressources/hermes/hermes_rollenmodell.png)
+
+    Die Unterteilung in Stammorganisation und Projektorganisation dient der Visualisierung der effektiven Abtrennung des Projekts von der Unternehmerischen Führung. Verbindungspunkte bestehen und Unternehmungsführungspersonen können auch direkt als Stakeholder in das Projekt eingegliedert werden.
 
 ## Was kann Hermes?
-
-### Vorteile / Nachteile
 
 #### Vorteile:
 
@@ -74,44 +95,58 @@ Insgesamt eignet sich HERMES insbesondere für komplexe Projekte mit vielen Bete
 		
 ## Wie geht man mit Hermes vor?
 
+Bei Hermes gibt es zwei unterschiedliche Methoden zur effektiven Umsetzung, die klassische Methode und die agile Methode.
+
 ### Klassisch
 
 1. Initiation:
+
     In dieser Phase wird das Projekt initialisiert. Das bedeutet, dass das Projektziel, der Projektauftrag, die Rahmenbedingungen und die Projektorganisation festgelegt werden.
 
 2. Konzeption:
+
     In dieser Phase wird das Projektkonzept ausgearbeitet. Das bedeutet, dass das Lasten- und Pflichtenheft erstellt wird, die Risiken identifiziert werden und das Projektbudget festgelegt wird.
 
 3. Realisierung:
+
     In dieser Phase wird das Projekt umgesetzt. Das bedeutet, dass das Projektteam die Arbeitspakete und Meilensteine festlegt, die Aufgaben verteilt und die Arbeit durchführt.
 
 4. Einführung:
+
     In dieser Phase wird das Projekt implementiert. Das bedeutet, dass die Ergebnisse des Projekts in Betrieb genommen werden, Schulungen durchgeführt werden und eine Support-Organisation aufgebaut wird.
 
 5. Abschluss:
+
     In dieser Phase wird das Projekt abgeschlossen. Das bedeutet, dass eine Abschlussdokumentation erstellt wird, die Ergebnisse bewertet und die Projekterfahrungen dokumentiert werden.
 
 Mit diese Methode werden Meilensteine abgearbeitet.
 
-![Hermes_Klassisch.png](../../Ressources/Hermes_Klassisch.png)
+![Hermes Klassisch](../../ressources/hermes/Hermes_Klassisch.png)
 
 ### Agil
 
 1. Initiation:
+
     In dieser Phase wird das Projekt initialisiert. Das bedeutet, dass das Projektziel, der Projektauftrag, die Rahmenbedingungen und die Projektorganisation festgelegt werden.
 
 2. Umsetzung:
+
     Die Umsetzungsphase, fässt als Agile-Methode die 3 Phasen "Konzeption,Realisierung und Einführung" zusammen.
     Die Lösungsanforderungen werden weiter aufgeteilt, verfeinert und konkretisiert. Die Anforderungen werden aktualisiert und priorisiert und nach absteigender Priorität abgearbeitet (entwickelt, realisiert und in Betrieb genommen), wobei die Prioritäten kontinuierlich aktualisiert und den Projekterkenntnissen entsprechend angepasst. Dadurch wird das ganze Projekt agiler.
 
 5.  Abschluss:
+
     In dieser Phase wird das Projekt abgeschlossen. Das bedeutet, dass eine Abschlussdokumentation erstellt wird, die Ergebnisse bewertet und die Projekterfahrungen dokumentiert werden.
 
 Mit dieser Methode wird mit Releases und Releasefreigaben gearbeitet.
 
- ![Hermes_Klassisch.png](../../Ressources/Hermes_Agil.png)
+ ![Hermes Agil](../../ressources/hermes/Hermes_Agil.png)
 
 		
 ### Praxisbeispiel
 
+[Am 26. April 2006 wurde das Projekt Quapital (QUAlité des Projets d'Implémentation des Technologies de l'information et de la communication dans l'Administration Luxembourgeoise) der Regierung von Luxemburg vorgestellt. Das Ziel vom Teilbereich Quapital Werkzeuge ist es konsistente Daten auf allen Ebenen (Projekt, Programm und Portfolio) zu erhalten. Dieses Tool basiert vollständig auf Quapital-Hermes.](https://de.wikipedia.org/wiki/Hermes_(Projektmanagementmethode))
+
 ## Abschluss
+
+Hermes ist ein interessantes Projektmanagment, welches ich persönlich schon länger kennenlernen wollte. Diese Möglichkeit hat sich mit jetzt geboten.
