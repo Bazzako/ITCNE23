@@ -6,8 +6,8 @@ This Library shows all the work i will do from 2023 until summer 2026
 Feel free to Copy work if it helps you in your progression
 
 ### 1.Semester
-[here](../ITCNE23/AWS/)
-[here](../ITCNE23/Azure/)
-[here](../ITCNE23/MAAS/)
-[here](../ITCNE23/PE/)
-[here](../ITCNE23/PRJ/)
+[AWS](../ITCNE23/AWS/)
+[Azure](../ITCNE23/Azure/)
+[MAAS](../ITCNE23/MAAS/)
+[PE](../ITCNE23/PE/)
+[PRJ](../ITCNE23/PRJ/)
