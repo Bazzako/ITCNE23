@@ -16,21 +16,21 @@ Over the manual it's rather simple, everything is clickable and leads you direct
 
 Firstly, create a new ressource group.
 
-![create_ressource_group](../Azure/ressources/pictures/ressource_creation/create_ressource_group.png)
+![create_ressource_group](../../Azure/ressources/pictures/ressource_creation/create_ressource_group.png)
 
 Inside this ressource group click create function app.
 This is the shortcut way to create a new WebApp and will use the Ressource Group it is created from.
 
-![create_function_app_inside_ressource_group](../Azure/ressources/pictures/ressource_creation/create_function_app_inside_ressource_group.png)
+![create_function_app_inside_ressource_group](../../Azure/ressources/pictures/ressource_creation/create_function_app_inside_ressource_group.png)
 
 Be sure to check the ressource group nonetheless.
 It has to be the one we previously created.
 
-![select_correct_ressource_group](../Azure/ressources/pictures/ressource_creation/select_correct_ressource_group.png)
+![select_correct_ressource_group](../../Azure/ressources/pictures/ressource_creation/select_correct_ressource_group.png)
 
 You also have to create a new App Service Plan, you can do this directly from here.
 
-![create_new_app_service_plan](../Azure/ressources/pictures/ressource_creation/create_new_app_service_plan.png)
+![create_new_app_service_plan](../../Azure/ressources/pictures/ressource_creation/create_new_app_service_plan.png)
 
 # With Azure CLI
 
@@ -53,5 +53,19 @@ Now, with the ressource-group and the App plan created, we can finally actually 
 
 # With Powershell CMDlets
 
+To use this method, you to firstly install the Powershell Module.
 
+    Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+
+Once you installed the module, you have to log in. So that the module uses your Azure account. This will open a Browser window, which connects the module to your Azure Account.
+
+    Connect-AzAccount
+
+With this command, you can create a Ressource Group.
+
+    New-AzResourceGroup -Name ResourceGroupPowershell -Location "East US"
+
+Inside the Ressource Group, you can now create a Ressource.
+
+    New-AzResource -Location "East US" -Properties @{test="test"} -ResourceName MarcoDennisPowershell -ResourceType microsoft.web/sites -ResourceGroupName ResourceGroupPowershell -Force
 
