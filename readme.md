@@ -7,7 +7,7 @@ Feel free to Copy work if it helps you in your progression
 
 ### 1. Semester
 -   [AWS](https://github.com/Bazzako/ITCNE23/tree/main/AWS)
--   [Azure](../ITCNE23/Azure/)
--   [MAAS](../ITCNE23/MAAS/)
--   [PE](../ITCNE23/PE/)
--   [PRJ](../ITCNE23/PRJ/)
+-   [Azure](https://github.com/Bazzako/ITCNE23/tree/main/Azure)
+-   [MAAS](https://github.com/Bazzako/ITCNE23/tree/main/Azure)
+-   [PE](https://github.com/Bazzako/ITCNE23/tree/main/Azure)
+-   [PRJ](https://github.com/Bazzako/ITCNE23/tree/main/PRJ)
