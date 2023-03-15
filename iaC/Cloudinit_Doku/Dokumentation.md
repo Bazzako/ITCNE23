@@ -4,15 +4,15 @@ Cloud Init ist eine Software um eine reihe von Python skripte während der Aufse
 
 ## 5 Stages
 
-### Generator
+### 1. Generator
 Der cloud-init-Generator systemd wird gestartet. Dieser ermittelt dann, ob cloud-init in die Startziele einbezogen werden soll, und ist dies der Fall, aktiviert er cloud-init.
-### Local
+### 2. Local
 Hier sucht cloud-init nach der lokalen Datenquelle „Azure“. Dadurch wird es cloud-init ermöglicht, eine Verbindung mit Azure herzustellen und eine Netzwerkkonfiguration, einschließlich Fallback, anzuwenden.
-### Network
+### 3. Network
 Das Netzwerk muss funktionsbereit sein, und die NIC- und Routingtabelleninformationen müssen generiert werden. In dieser Phase werden die Module ausgeführt, die in „/etc/cloud/cloud.cfg“ in cloud_init_modules aufgeführt sind. Die VM wird in Azure eingebunden, der kurzlebige Datenträger wird formatiert, der Hostname wird festgelegt, und es werden weitere Aufgaben ausgeführt.
-### Config
+### 4. Config
 In dieser Phase werden die Module in cloud_config_modules ausgeführt, die in „/etc/cloud/cloud.cfg“ definiert und aufgeführt sind.
-### Final
+### 5. Final
 In dieser abschließenden Phase werden die Module ausgeführt, die in „/etc/cloud/cloud.cfg“ in cloud_final_modules aufgeführt sind. Hier werden Module ausgeführt, die spät im Startprozess ausgeführt werden müssen, z. B. Paketinstallationen, werden Skripts ausgeführt usw.
 
 ## Auslesen des Logfiles
