@@ -1,0 +1,16 @@
+#cloud-config
+
+groups:
+  - students: [bob,john]
+
+users:
+  - default
+  - name: bob
+    primary_group: student
+    groups: sudo
+    lock_passwd: false
+    passwd: 
+  - name: john
+    primary_group: student
+    groups: sudo
+    psswd:
