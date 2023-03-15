@@ -20,7 +20,7 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
 
     Hermes teilt das Projekt in Phasen ein, die von der Initialisierung bis zur Umsetzung reichen. Jede Phase wird sorgfältig geplant und dokumentiert, um sicherzustellen, dass das Projekt erfolgreich abgeschlossen wird. Die neuste Hermes Variante unterstützt Phasen für die agile Projektführung, wie auch die klassische Variante.
 
-    ![Phasen](../../ressources/hermes/hermes_phasen.png)
+    ![Phasen](../../Ressources/hermes/hermes_phasen.png)
 
     Innerhalb der einzelnen Phasen werden Module eingesetzt, welche einzelne Teilschritte des Projekts darstellen. Phasen stellen den Projektfortschritt dar. Einzelne Module (wie zb. das Standardmodul [Projektführung](https://www.hermes.admin.ch/de/pjm-2022/verstehen/module/projektfuehrung.html)) können dabei in mehreren Phasen auftreten.
 
