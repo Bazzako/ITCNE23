@@ -1,0 +1,38 @@
+# Cloud Init
+
+Cloud Init ist eine Software um eine reihe von Python skripte während der Aufsetzung einer Virtuellen-Maschine laufen zu lassen. Somit werden Virtuelle-Maschinen automatisiert bereitgestellt
+
+## 5 Stages
+
+- Generator
+- Local
+- Network
+- Config
+- Final
+
+## Auslesen des Logfiles
+
+Muss auf der Shell der Virtuellen-Maschine ausgeführt werden
+- less /var/log/cloud-init.log
+mit "/" nach schlagwörte suchen
+mit "n" next
+mit "p" previous
+mit "q" quit
+
+## Auslesen der angewendeten Konfigurationen auf der virtuellen Maschine
+
+- lsbk
+Um die Blockdevices anzusehen.
+Cloudprovider mounten mit einem Blockdevice z.B: ROM ein ISOFile unter die virtuelle Maschine
+[LSBK](../Ressources/Cloudinit/lsbk.png)
+- mkdir /tmp/Test1
+Eine Ordner anlegen
+- sudo mount /dev/sr0 /tmp/test1
+Mounten des ISO's auf den Ordner
+- ls -lh /tmp/Test1
+Listen vom Ordner
+- less user-data
+Auflisten der angewendete user-data Konfiguration
+[userdata](../Ressources/Cloudinit/user-data.png)
+
+

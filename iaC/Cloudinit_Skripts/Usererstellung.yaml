@@ -8,9 +8,18 @@ users:
   - name: bob
     primary_group: student
     groups: sudo
-    lock_passwd: false
-    passwd: 
   - name: john
     primary_group: student
     groups: sudo
-    psswd:
+
+ssh_pwauth: true
+chpasswd:
+  expire: false
+  users:
+    - name: bob
+      password: Init123456
+      type: text
+    - name: john
+      password: Init123456
+      type: text
+
