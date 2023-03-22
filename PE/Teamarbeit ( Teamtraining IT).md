@@ -18,3 +18,19 @@
 	- Nicht aktuelle oder keine vorhandene Dokumentationen
 	- Schlechtes reden wird teils von Mitarbeiter übernommen
 	- Blöde Sprüche während Schnupperlehrlinge anwesend sind (Wird dann im Team hinterfragt)
+
+
+-   Wie würdest du die Leistungsfähigkeiten deines Teams heute beschreiben?​
+	- Sehr gut
+	- Zielorientiert
+	- klare Struktur
+-   Welche Faktoren beeinflussen die Leistung des Teams?​
+	- Externe faktoren
+	- Umfeld
+	- Leistungsfähigkeit jedes einzelnen
+-   Welche davon kannst du direkt beeinflussen?​
+	- Leistungsfähigkeit
+-   Welche persönlichen Einstellungen und Verhaltensweisen steigern die Leistungsfähigkeit im Team?
+	- Disziplin
+	- Zielstrebigkeit des Chefs
+	- Kommunikativ sein
