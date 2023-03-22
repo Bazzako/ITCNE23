@@ -1,0 +1,20 @@
+-   Welche Verhaltensweisen erlebst du als hilfreich, zielführend und professionell – produktiv?​
+	- Intresse zeigen
+	- Kompromisse eingehen können
+	- Anstand
+	- Feedbacks und Hilfestellen
+-   Nenne Situationen im Team, in denen du zu produktiven Verhaltenstendenzen neigst.​
+	- Nach abeschlossenen Projekten lob für die gute Arbeit gekommen
+	- Offen für Lösungswege sein
+	- Gutes Teamklima
+	- Bei Problemen gegenseitig helfen
+-   Welche Verhaltensweisen erlebst du als hindernd, destruktiv – also non produktiv?​
+	- Kein Feedback
+	- Dokumentationen
+	- Schlecht über Kunden reden
+	- Nicht angebrachte Sprüche bringen
+-   Nenne Situationen im Team, in denen du zu non-produktiven Verhalten neigst.​
+	- Nach Hilfe Lösung nicht bekannt geben
+	- Nicht aktuelle oder keine vorhandene Dokumentationen
+	- Schlechtes reden wird teils von Mitarbeiter übernommen
+	- Blöde Sprüche während Schnupperlehrlinge anwesend sind (Wird dann im Team hinterfragt)
