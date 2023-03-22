@@ -1,4 +1,5 @@
--   Welche Verhaltensweisen erlebst du als hilfreich, zielführend und professionell – produktiv?​
+## Verhaltensweisen wahrnehmen
+- Welche Verhaltensweisen erlebst du als hilfreich, zielführend und professionell – produktiv?​
 	- Intresse zeigen
 	- Kompromisse eingehen können
 	- Anstand
@@ -19,7 +20,7 @@
 	- Schlechtes reden wird teils von Mitarbeiter übernommen
 	- Blöde Sprüche während Schnupperlehrlinge anwesend sind (Wird dann im Team hinterfragt)
 
-
+## Leistung fördern
 -   Wie würdest du die Leistungsfähigkeiten deines Teams heute beschreiben?​
 	- Sehr gut
 	- Zielorientiert
