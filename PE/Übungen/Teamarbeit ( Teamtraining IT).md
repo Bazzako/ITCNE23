@@ -35,3 +35,15 @@
 	- Disziplin
 	- Zielstrebigkeit des Chefs
 	- Kommunikativ sein
+
+## Grenzen nutzen und überwinden
+-   Wie gehen wir im Team mit Fehlern und Missverständnissen um?​
+	- Offen
+	- Q-Meldungen
+-   Können wir in der Zusammenarbeit auch zugeben, dass wir bestimmte Aufgaben nicht tun können?​
+	- Ja    
+-    Kennst du deine persönlichen Grenzen? Wie oder durch wen könnten diese ergänzt werden?​
+	- Jein    
+-    Von welchem (persönlich oder im Team) Fehler hast du bisher am meisten profitiert?
+	- Chef
+
