@@ -16,21 +16,21 @@ Over the manual it's rather simple, everything is clickable and leads you direct
 
 Firstly, create a new ressource group.
 
-![create_ressource_group](../../Azure/ressources/pictures/ressource_creation/create_ressource_group.png)
+![create_ressource_group](ITCNE23/1.%20Semester/Azure/ressources/pictures/ressource_creation/create_ressource_group.png)
 
 Inside this ressource group click create function app.
 This is the shortcut way to create a new WebApp and will use the Ressource Group it is created from.
 
-![create_function_app_inside_ressource_group](../../Azure/ressources/pictures/ressource_creation/create_function_app_inside_ressource_group.png)
+![create_function_app_inside_ressource_group](ITCNE23/1.%20Semester/Azure/ressources/pictures/ressource_creation/create_function_app_inside_ressource_group.png)
 
 Be sure to check the ressource group nonetheless.
 It has to be the one we previously created.
 
-![select_correct_ressource_group](../../Azure/ressources/pictures/ressource_creation/select_correct_ressource_group.png)
+![select_correct_ressource_group](ITCNE23/1.%20Semester/Azure/ressources/pictures/ressource_creation/select_correct_ressource_group.png)
 
 You also have to create a new App Service Plan, you can do this directly from here.
 
-![create_new_app_service_plan](../../Azure/ressources/pictures/ressource_creation/create_new_app_service_plan.png)
+![create_new_app_service_plan](ITCNE23/1.%20Semester/Azure/ressources/pictures/ressource_creation/create_new_app_service_plan.png)
 
 # With Azure CLI
 

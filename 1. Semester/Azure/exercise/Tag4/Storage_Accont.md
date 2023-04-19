@@ -29,15 +29,15 @@ Um eine Verbindung mit einem Storage Account herstellen zu können, gibt es vers
 1. SAS Token generieren
     Im Azure Portal wird unter "Shared access signature" für den Storage Account ein SAS Token URL erstellt.
     Wichtig! *Allowed resource types* muss *Service* eingestellt sein.
-    ![Ressource](../../ressources/pictures/storage_account/Allowed_ressource.png)
+    ![Ressource](Allowed_ressource.png)
     Für die Verbindung im Azure storage explorer muss der *Blob service SAS URL* kopiert werden.
 
 2. Connection zwischen Azure Storage Explorer und dem Storage Account erstellen
     Damit mit Azure storage explorer gearbeitet werden kann, muss es auf den Client installiert werden.
     Im Azure storage exporer kann man nun eine Ressource auswählen.
-    ![Ressource](../../ressources/pictures/storage_account/Ressource_ausw%C3%A4hlen.png)
+    ![Ressource](Ressource_auswählen.png)
     Verbindungsmethode wird *SAS-URL* verwendet.
-    ![Ressource](../../ressources/pictures/storage_account/Verbindungsmethode.png)
+    ![Ressource](Verbindungsmethode.png)
     Im letzten Schritt wird der Kopierte *Blob service SAS URL* unter *Dienst-URL:* eingefügt und mit weiter bestätigt
     Nun kann man auf seine Blob Containers die gwünschten Dateien Hochladen
 

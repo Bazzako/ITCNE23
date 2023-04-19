@@ -1,6 +1,6 @@
 # Hermes
 
-![Hermes Header](../../Ressources/hermes/hermes_header.png)
+![Hermes Header](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/hermes_header.png)
 
 ## Was ist Hermes?
 Die Projektmanagementmethode "Hermes" ist eine Schweizer Projektmanagmentmethode, die in der öffentlichen Verwaltung sowie in anderen Branchen angewendet werden kann. Der Name steht als Akronym für „Handbuch der Elektronischen Rechenzentren des Bundes, eine Methode zur Entwicklung von Systemen“. 
@@ -20,7 +20,7 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
 
     Hermes teilt das Projekt in Phasen ein, die von der Initialisierung bis zur Umsetzung reichen. Jede Phase wird sorgfältig geplant und dokumentiert, um sicherzustellen, dass das Projekt erfolgreich abgeschlossen wird. Die neuste Hermes Variante unterstützt Phasen für die agile Projektführung, wie auch die klassische Variante.
 
-    ![Phasen](../../Ressources/hermes/hermes_phasen.png)
+    ![Phasen](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/Hermes_Phasen.png)
 
     Innerhalb der einzelnen Phasen werden Module eingesetzt, welche einzelne Teilschritte des Projekts darstellen. Phasen stellen den Projektfortschritt dar. Einzelne Module (wie zb. das Standardmodul [Projektführung](https://www.hermes.admin.ch/de/pjm-2022/verstehen/module/projektfuehrung.html)) können dabei in mehreren Phasen auftreten.
 
@@ -29,7 +29,7 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
     Module enthalten thematisch zusammengehörende Aufgaben und Ergebnisse. Sie sind Bausteine zur Erstellung von Projekten und Szenarien. Das Modul Projektführung enthaltet zum Beispiel die Aufgabe 
     [Qualitätssicherung führen](https://www.hermes.admin.ch/de/pjm-2022/verstehen/aufgaben/qualitaetssicherung-fuehren.html). Aufgaben werden im nächsten Punkt genauer beschrieben. Diese Aufgaben führen immer zu Ergebnissen.
 
-    ![Module](../../ressources/hermes/hermes_module.png)
+    ![Module](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/hermes_module.png)
     
     Hermes biete eine Vielzahl von Standardmodulen, welche individuell angepasst werden können, oder sogar durch komplett eigene Module ersetzt werden können.
 
@@ -39,7 +39,7 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
     
     Verbindet man diese Aktivität nun mit der Aktivität *Altsystem abbauen.*, ergibt dies die **Aufgabe** *Altsystem ausser Betrieb setzen*, mit dem Ergebniss *Altsystem entfernt*
 
-    ![Aufgaben und Ergebnisse](../../ressources/hermes/hermes_aufgaben.PNG)
+    ![Aufgaben und Ergebnisse](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/hermes_aufgaben.PNG)
 
     Ergebnisse sind entweder neue Zustände der Situation, wie im vorherigen Beispiel, oder aber Dokumente, welche vorrausgehend mit einer Vorlage definiert worden sind.
 
@@ -51,13 +51,13 @@ Die Methode besteht aus einem umfassenden Handbuch, das verschiedene Aspekte des
 
     Jede Aufgabe hat einen Verantwortlichen, mit einer spezifischen Rolle. Dieser Verantwortliche ist dafür zuständig, dass die definierten Ergebnisse erreicht werden. Dazu können aber auch noch andere Rollen miteinbezogen werden, sodass eine bestimmte Aufgabe von mehreren Rollen bearbeitet werden kann.
 
-    ![Multiple Stakeholders](../../ressources/hermes/hermes_mehrere_stakeholder_eine_aufgabe.PNG)
+    ![Multiple Stakeholders](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/hermes_mehrere_stakeholder_eine_aufgabe.PNG)
 
     Hier zum Beispiel sieht man gut, dass der Entwickler dafür verantwortlich ist, dass ein Prototyp realisiert wird. Für diese Aufgabe muss aber der IT-Architekt und der Anwendervertreter miteinbezogen werden, da diese massgeblich dazu beitragen müssen, dass der Prototyp in die jetzige IT-Architektur eingebunden wird (falls möglich) und von den Anwendern geforderte Anforderungen korrekt umgesetzt werden.
 
     Die einzelnen Rollen werden in einem hierarchischen Rollenmodell definiert. Dieses Modell ist nicht relevant für die Aufgaben / Module, bietet aber eine Übersicht.
 
-    ![Rollenmodell](../../ressources/hermes/hermes_rollenmodell.png)
+    ![Rollenmodell](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/hermes_rollenmodell.png)
 
     Die Unterteilung in Stammorganisation und Projektorganisation dient der Visualisierung der effektiven Abtrennung des Projekts von der Unternehmerischen Führung. Verbindungspunkte bestehen und Unternehmungsführungspersonen können auch direkt als Stakeholder in das Projekt eingegliedert werden.
 
@@ -121,7 +121,7 @@ Bei Hermes gibt es zwei unterschiedliche Methoden zur effektiven Umsetzung, die 
 
 Mit diese Methode werden Meilensteine abgearbeitet.
 
-![Hermes Klassisch](../../ressources/hermes/Hermes_Klassisch.png)
+![Hermes Klassisch](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/Hermes_Klassisch.png)
 
 ### Agil
 
@@ -140,7 +140,7 @@ Mit diese Methode werden Meilensteine abgearbeitet.
 
 Mit dieser Methode wird mit Releases und Releasefreigaben gearbeitet.
 
- ![Hermes Agil](../../ressources/hermes/Hermes_Agil.png)
+ ![Hermes Agil](ITCNE23/1.%20Semester/PRJ/Ressources/hermes/Hermes_Agil.png)
 
 		
 ### Praxisbeispiel

@@ -29,7 +29,7 @@ mit "q" quit
 -  lsbk
 Um die Blockdevices anzusehen.
 Cloudprovider mounten mit einem Blockdevice z.B: ROM ein ISOFile unter die virtuelle Maschine
-[LSBK](../Ressources/Cloudinit/lsbk.png)
+[LSBK](lsbk.png)
 - mkdir /tmp/Test1
 Eine Ordner anlegen
 - sudo mount /dev/sr0 /tmp/test1
@@ -38,7 +38,7 @@ Mounten des ISO's auf den Ordner
 Listen vom Ordner
 - less user-data
 Auflisten der angewendete user-data Konfiguration
-[userdata](../Ressources/Cloudinit/user-data.png)
+[userdata](user-data.png)
 
 
 ## Example Files
