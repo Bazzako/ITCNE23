@@ -1,7 +1,7 @@
 #cloud-config
 
-#ssh_authorized_keys:
- # - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMA6/o8eaQchlkuzhU3sJZes4iJFHdcA/LttuxWj62/a dennis.buathong@hotmail.com
+ssh_authorized_keys:
+ - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMA6/o8eaQchlkuzhU3sJZes4iJFHdcA/LttuxWj62/a dennis.buathong@hotmail.com
 
 write_files:
 - path: /tmp/iackey
