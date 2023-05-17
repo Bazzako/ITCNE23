@@ -1,0 +1,58 @@
+#cloud-config
+
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMA6/o8eaQchlkuzhU3sJZes4iJFHdcA/LttuxWj62/a dennis.buathong@hotmail.com
+
+runcmd:
+  - git clone https://@gitlab.com/armindoerzbachtbz/wordpress.git /opt/wordpress
+  - cd /home/ubuntu/
+  - touch /etc/cloud/cloud-init.disabled
+
+locale: de_CH
+
+ntp:
+  enabled: true
+  ntp_client: systemd-timesyncd
+  servers:
+    - 0.ch.pool.ntp.org
+
+package:
+  - git
+package_update: true
+package_upgrade: true
+
+power_state:
+    delay: '2'
+    mode: reboot
+    message: Tschüss
+
+manage_resolv_conf: true
+
+resolv_conf:
+  nameservers: ['8.8.4.4', '8.8.8.8']
+  timeout: 1
+
+  vendor_data:
+    enabled: False
+    prefix: /usr/bin/ltrace
+
+timezone: "US/Pacific"
+
+groups:
+  - hf_tbz: [dennis]
+  - cloud-users
+
+users:
+  - default
+  - name: dennis
+    primary_group: hf_tbz
+    groups: sudo
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: true
+    ssh_authorized_keys: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMA6/o8eaQchlkuzhU3sJZes4iJFHdcA/LttuxWj62/a dennis.buathong@hotmail.com
+
+write_files:
+-   encoding: b64
+    content: SXQgaXMgYSBsb3ZlbHkgZGF5IHRvZGF5LiBQbGVhc2UgYmUgc3VyZSB5b3Ugd2FudCByZWFsbHkgdG8gd29yay4KVGhlIHN5c3RlbSBpcyB1bmRlciBzdXJ2ZWlsbGFuY2UuIExvZ291dCBpbW1lZGlhdGVseSBpZiB0aGUgc3VuIGlzIHNoaW5pbmcu
+    path: /etc/modt
+    permissions: '0600'
