@@ -9,7 +9,7 @@ runcmd:
   - touch /etc/cloud/cloud-init.disabled
 
 locale: de_CH
-
+v
 ntp:
   enabled: true
   ntp_client: systemd-timesyncd
