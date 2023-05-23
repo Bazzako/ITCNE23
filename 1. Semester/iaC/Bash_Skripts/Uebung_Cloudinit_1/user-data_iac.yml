@@ -9,8 +9,13 @@ write_files:
   content: |
 SSH-KEY-PLACE
 
+packages:
+ - git
+ - ansible
+
 runcmd:
+- [ python3, -m, pip, install, ansible ]
 - export GIT_SSH_COMMAND="ssh -i /tmp/iackey -o StrictHostKeyChecking=no"
 - cd /home/ubuntu/
-- git clone git@gitlab.com:Bazzako/iac_test.git
+- git clone git@gitlab.com:Bazzako/iac_ansible.git
 - touch /etc/cloud/cloud-init.disabled
