@@ -1,0 +1,14 @@
+virtualmachines:
+  hosts:
+    managenode1:
+      ansible_host: 3.73.130.68
+      ansible_user: ubuntu
+    managenode2:
+      ansible_host: 18.159.214.219
+      ansible_user: ubuntu
+    managenode3:
+      ansible_host: 3.123.35.71
+      ansible_user: ubuntu
+    managenode4:
+      ansible_host: 3.71.181.225
+      ansible_user: ubuntu
