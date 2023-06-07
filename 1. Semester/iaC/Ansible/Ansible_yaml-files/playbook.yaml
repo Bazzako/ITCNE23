@@ -1,0 +1,9 @@
+#Mit diesem Playbook werden auf den hosts "virtualmaschines" der Task "Create my File" ausgeführt, welche ein File in den Root aller virtuellen server erstellt
+
+- name: My first play
+  hosts: virtualmachines
+  tasks:
+   - name: Create my File
+     file:
+        path: "/Dennis"
+        state: touch
