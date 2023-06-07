@@ -1,0 +1,24 @@
+## template: jinja
+#cloud-config
+
+packages:
+ - Apache2
+
+ssh_authorized_keys:
+ - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMA6/o8eaQchlkuzhU3sJZes4iJFHdcA/LttuxWj62/a dennis.buathong@hotmail.com
+
+write_files:
+- path: /var/www/html
+  permissions: '0600'
+  content:
+<html>
+<body>
+My hostname is : <publichostname> <br>
+I am running in the cloud: <cloudname> <br>
+My distro is: <distroname> <br>
+</body>
+</html>
+
+
+runcmd:
+- touch /etc/cloud/cloud-init.disabled
