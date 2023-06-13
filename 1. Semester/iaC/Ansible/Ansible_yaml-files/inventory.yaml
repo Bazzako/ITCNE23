@@ -1,14 +1,84 @@
-virtualmachines:
+Migros:
+  children:
+    Migrosdatenbank:
+      vars:
+        Username: Migrosdb
+        Password: Login4Migrosdb
+      hosts:
+        Migrosdb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.6
+    Migroswebserver:
+      vars:
+        Username: Migrosws
+        Password: Login4Migrosws
+      hosts:
+        Migrosws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Coop:
+  children:
+    Coopdatenbank:
+      vars:
+        Username: Coopdb
+        Password: Login4Coopdb
+      hosts:
+        Coopdb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.68
+    Coopwebserver:
+      vars:
+        Username: Coopws
+        Password: Login4Coopws
+      hosts:
+        Coopws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Lidl:
+  children:
+    Lidldatenbank:
+      vars:
+        Username: Lidldb
+        Password: Login4Lidldb
+      hosts:
+        Lidldb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.68
+    Lidlwebserver:
+      vars:
+        Username: Lidlws
+        Password: Login4Lidlws
+      hosts:
+        Lidlws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Aldi:
+  children:
+    Aldidatenbank:
+      vars:
+        Username: Aldidb
+        Password: Login4Aldidb
+      hosts:
+        Aldidb01:
+          ansible_user: ubuntu
+          ansible_host: 3.73.130.68
+    Aldiwebserver:
+      vars:
+        Username: Aldiws
+        Password: Login4Aldiws
+      hosts:
+        Aldiws01:
+          ansible_user: ubuntu
+          ansible_host: 18.159.214.219
+Datenbankserver:
   hosts:
-    managenode1:
-      ansible_host: 3.73.130.68
-      ansible_user: ubuntu
-    managenode2:
-      ansible_host: 18.159.214.219
-      ansible_user: ubuntu
-    managenode3:
-      ansible_host: 3.123.35.71
-      ansible_user: ubuntu
-    managenode4:
-      ansible_host: 3.71.181.225
-      ansible_user: ubuntu
+    Migrosdb01:
+    Coopdb01:
+    Lidldb01:
+    Aldidb01:
+Webserver:
+  hosts:
+    Migrosws01:
+    Coopws01:
+    Lidlws01:
+    Aldiws01:
