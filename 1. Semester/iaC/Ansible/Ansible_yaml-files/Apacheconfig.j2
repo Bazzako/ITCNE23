@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+	ServerName {{ virtualhostname }}
+
+	ServerAdmin webmaster@{{ virtualhostname }}
+	DocumentRoot /var/www/{{ virtualhostname }}
+	ErrorLog ${APACHE_LOG_DIR}/error_{{ virtualhostname }}.log
+	CustomLog ${APACHE_LOG_DIR}/access_{{ virtualhostname }}.log combined
+        <Directory /var/www/{{ virtualhostname }}>
+	        AuthType Basic
+	        AuthName "By Invitation Only"
+	        AuthBasicProvider file
+	        AuthUserFile "/etc/apache2/passwdfile"
+	        Require valid-user
+        </Directory>
+
+
+</VirtualHost>
