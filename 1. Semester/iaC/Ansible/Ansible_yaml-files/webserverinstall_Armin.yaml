@@ -1,0 +1,60 @@
+- name: install apache
+  hosts: webserver
+  become: true
+  tasks: 
+  - name: install python3-passlib
+    ansible.builtin.package: 
+      name: python3-passlib
+      state: present
+  - name: install apache binary
+    ansible.builtin.package: 
+      name: apache2
+      state: present
+  - name: start apache
+    ansible.builtin.service: 
+      name: apache2
+      state: started
+      enabled: true
+      
+  - name: Add a user {{ web_username }} to a password file and ensure permissions are set
+    community.general.htpasswd:
+      path: /etc/apache2/passwdfile
+      name: '{{ Username }}'
+      password: '{{ Password }}'
+      owner: root
+      group: www-data
+      mode: 0640
+
+  - name: document root for virtual host
+    ansible.builtin.file:
+      path: /var/www/{{ virtualhostname }}
+      state: directory
+      owner: root
+      group: www-data
+      mode: 0755
+  - name: index.html for virtual host 
+    ansible.builtin.template:
+      src: templates/index.j2
+      dest: /var/www/{{ virtualhostname }}/index.html
+      owner: root
+      group: www-data
+    
+  - name: create apache vhost_virtualhostname.conf
+    ansible.builtin.template:
+      src: templates/vhost.j2
+      dest: /etc/apache2/sites-available/{{ virtualhostname }}.conf
+      owner: root
+      group: www-data
+    notify: reload apache
+
+  - name: enable site 
+    ansible.builtin.file:
+      src: /etc/apache2/sites-available/{{ virtualhostname }}.conf
+      dest: /etc/apache2/sites-enabled/{{ virtualhostname }}.conf
+      state: link
+    notify: reload apache
+
+  handlers:
+  - name: reload apache
+    ansible.builtin.shell:
+      cmd: apachectl restart

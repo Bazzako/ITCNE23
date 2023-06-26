@@ -1,8 +1,0 @@
-#Mit diesem Playbook werden auf den hosts "virtualmaschines" der Task "Create my File" ausgeführt, welche ein File in den Root aller virtuellen server erstellt
-
-- name: Install 4 Apache Server
-  hosts: Webserver
-  tasks:
-   - name: Install Apache Package
-      runcmd:
-      apt install apache2

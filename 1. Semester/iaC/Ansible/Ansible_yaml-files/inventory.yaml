@@ -12,6 +12,7 @@ Migros:
       vars:
         Username: Migrosws
         Password: Login4Migrosws
+        virtualhostname: migros.ch
       hosts:
         Migrosws01:
           ansible_user: ubuntu
@@ -30,6 +31,7 @@ Coop:
       vars:
         Username: Coopws
         Password: Login4Coopws
+        virtualhostname: coop.ch
       hosts:
         Coopws01:
           ansible_user: ubuntu
@@ -48,6 +50,7 @@ Lidl:
       vars:
         Username: Lidlws
         Password: Login4Lidlws
+        virtualhostname: lidl.ch
       hosts:
         Lidlws01:
           ansible_user: ubuntu
@@ -66,6 +69,7 @@ Aldi:
       vars:
         Username: Aldiws
         Password: Login4Aldiws
+        virtualhostname: aldi.ch
       hosts:
         Aldiws01:
           ansible_user: ubuntu
