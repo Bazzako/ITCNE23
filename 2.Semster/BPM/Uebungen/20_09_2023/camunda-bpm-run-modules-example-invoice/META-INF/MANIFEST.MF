@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven 3.2.5
+Built-By: camunda
+Build-Jdk: 11
+Implementation-Title: Camunda Platform - Run - Module Example Invoice
+Implementation-Version: 7.16.4-ee
+Implementation-Vendor-Id: org.camunda.bpm.run
+Implementation-Vendor: camunda services GmbH
+

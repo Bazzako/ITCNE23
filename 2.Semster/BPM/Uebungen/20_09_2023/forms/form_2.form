@@ -1,0 +1,24 @@
+{
+  "components": [
+    {
+      "label": "was hesch welle",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0t1xo34",
+        "columns": null
+      },
+      "id": "Field_1hzz08f",
+      "key": "was",
+      "description": "was isch sproblem"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1dypkg3",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.14.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 10
+}

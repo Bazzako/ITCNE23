@@ -1,0 +1,4 @@
+- Am 30.10.2023 nochmals Zeit für Antrag und stellen und erster Entwurf einreichen
+- keine Vorlagen bezüglich möglichen Semester arbeiten
+- Zeitlich weniger Zeit während dem Unterricht als 1. Semester
+- Semester arbeiten werden nun immer Präsentation haben -> ohne Fachgespräch -> Diplomarbeit dann mit Fachgespräch

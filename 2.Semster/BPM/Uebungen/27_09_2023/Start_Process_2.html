@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Camunda Prozess starten</title>
+</head>
+<body>
+    <form>
+        <label for="processKey">Prozessschlüssel:</label>
+        <input type="text" id="processKey" placeholder="Geben Sie den Prozessschlüssel ein">
+        <button type="button" onclick="startCamundaProcess()">Prozess starten</button>
+    </form>
+
+    <script>
+        function startCamundaProcess() {
+            var processKey = document.getElementById("processKey").value;
+
+            // Ersetzen Sie 'YOUR_CAMUNDA_API_URL' durch die URL Ihrer Camunda REST-API
+            var apiUrl = 'http://localhost:8080/engine-rest/process-definition/key/' + processKey + '/start';
+
+            // Senden einer POST-Anfrage an die Camunda REST-API, um den Prozess zu starten
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function(response) {
+                if (response.status === 200) {
+                    alert('Prozess wurde erfolgreich gestartet.');
+                } else {
+                    alert('Fehler beim Starten des Prozesses.');
+                }
+            })
+            .catch(function(error) {
+                console.error('Fehler: ' + error);
+            });
+        }
+    </script>
+</body>
+</html>
