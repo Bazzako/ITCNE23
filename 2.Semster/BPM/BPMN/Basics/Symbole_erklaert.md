@@ -21,3 +21,5 @@ Paralleles Gateway = AND - Gateway -> Alle ausgehende Sequenzflüsse werden auf 
 ## Artefakte
 
 ![Verbinden](../../Ressources/Artefakte.png)
+
+[BPMN 2.0 Symbols - A complete guide with examples. | Camunda](https://camunda.com/bpmn/reference/)

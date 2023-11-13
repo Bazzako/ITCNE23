@@ -1,0 +1,24 @@
+---
+- name: Auftrag Armin Ordnerstruktur
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create Folders
+      file:
+        path: "/home/ubuntu/{{ item }}"
+        state: directory
+      loop:
+        - docs
+        - docs/image
+        - src
+        - bin
+        - lib
+  - name: Create private key armin
+    lineinfile:
+      path: "/home/ubuntu/.ssh/authorized_keys"
+      line: "{{ ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA3YXZTrjfrkxqadOufvEFZznt4ja8pGi6ylpYPu2QATpzOXTY3eX3Z7ql9ZYZ0xyKi+rKsKKNffqE1Wj4rm32iaThb6AOJvANDaIJJeLSDU/bmnQ8fS4RA2PiAqs7Pl+bbuUy431TdRcMNQ2r5eUmDyo1G5a/7mWC0TvW6qQSttlGe+fsLnkqK2xB/IvqoIaNSHmyWSFa8KNNnMqSrH+jZgxTxLCrvXt9bN86DOybe9cLkBEwooL1iTIw1j+7BQtWYCys3vM8DIIENOOuynZs9VHjYuayFjkyxu2vptwZujWqtSLGUBWEcXa49C1iHOMypRsTW5KM7Ndu/IrFGLsRjw== ado@macbookair.local }}"
+  - name: Copy private key marcello
+    lineinfile:
+      path: "/home/ubuntu/.ssh/authorized_keys"
+      line: "{{ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCz/wpWmsCxaQyuNFrIachc/q9nUdByoUcBcicl/wnKLFktKp6du9np9Uhmo4M0tVHNnWCt5uNEi2ks/0XEbg2J+4heuAAKEDr/TVbgabiWGclYKpEWZvmw8gsQwfpAKVG4aS2re7wB2uhw82ZqzJVpGm3ne+sNnz5uVrxN8HUnuR2OWJD6bA9l/fBmE6zdObVXgrCJGjZmVyB5GMeTDJKExgoBpLggZn9CNdu7Sx989xtNLehu6SWM+mGCq9Lcu7usiPG+SuEb8XynYaCOnv8+Oko6SYeJ9Omq/E7Eg6vZHqCbBQ81TIZrGKcikLmF2xP7EOprGOSPVewke7ak7vvmOI+p/RfIAyXj1+GYny+esk9G+qDRFXP9uiIlMfH1oGkQkztvSDMH+EOHqgY66NWQJPj83CaWH/euR0MROHXjm1ar3RuN9qcASAnzCOQQ1FMwFkpIV5x0NDRx0Zp1rLt8ZUFykmIuHZI4g9u6RdAiuWUxx9/eF0fXZa6Ju7GEMKeMtZxJJjmB/WCOylbkT+NPw5RcxgyRLKmUAicnYKXBmULY3pQM/Ui8KiCyJqRbLDBAR+XZYsZ7X5uhcuteu8KIfA2xEbInB4Q3c0DnnSih+GEC4pEbz+NOfeCpLJEn4gfyV1S9S08sG62ls8NPFociA9aWmE1oXfcqwvOkkYhxOw== marcello.calisto@tbz.ch }}"
