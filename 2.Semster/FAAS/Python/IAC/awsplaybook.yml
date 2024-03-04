@@ -1,0 +1,56 @@
+- name: awsplay
+  hosts: localhost
+  connection: local
+
+  vars:
+    aws_region: us-east-1
+
+  tasks:
+  - name: Get all VPCs in region
+    amazon.aws.ec2_vpc_endpoint_info:
+      aws_region: "{{aws_region}}"
+    register: existing_endpoints
+  - name: Set the vpcid
+    set_fact:
+      vpcid: "{{existing_endpoints.vpc_endpoints[0].vpc_id}}"
+  - debug:
+     msg: "{{existing_endpoints}}"
+  - name: Get subnetid
+    amazon.aws.ec2_vpc_subnet_info:
+      filters:
+        availability-zone: "{{aws_region}}a"
+    register: subnets
+  - set_fact:
+      subnetid: "{{subnets.subnets[0].subnet_id}}"
+
+  - name: example using security group rule descriptions
+    amazon.aws.ec2_security_group:
+      name: "ssh and http"
+      description: sg with rule descriptions
+      vpc_id: "{{vpcid}}"
+      rules:
+        - proto: tcp
+          ports:
+          - 22
+          - 80
+          cidr_ip: 0.0.0.0/0
+          rule_desc: allow all on port 80
+    register: sg
+
+  - name: Launching EC2 instances
+    amazon.aws.ec2_instance:
+      profile: default
+      key_name: vockey
+      security_group: "{{ sg.group_name }}"
+      instance_type: t3.micro
+      image_id: "{{ aws_ami_id }}"
+      state: present
+      wait: yes
+      wait_timeout: 300
+      region: "{{ aws_region }}"
+      tags:
+        Name: "{{ vmname }}"
+      detailed_monitoring: no
+      vpc_subnet_id: "{{ subnetid }}"
+      network:
+        assign_public_ip: yes

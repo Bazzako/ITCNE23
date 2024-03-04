@@ -1,0 +1,16 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRI4IqTl6RNGbOJlpVLT6qSuRa34FqHtdOQaq1vxgTPPDesHMGrTIM2jaS2S6HgKMgW3C8COFXR23SQAcyF2C9G+H4MzTge/dmpFDJh3ram2N7HC/N1tB76W0nA05aQWvDHAHSqqB20pAstxvtq8DteGERCNj6sl9GRKDxwXdAthuRXwq+dM05cq6T7vDki/yMmJUYRmyGBEzKfci6XYBMQ079I/4x33NGGqsK23wFb3khqziCUTRtCwJe7frX9Z1ak2JG9RMdEf4l/5kGjOez0VptMcpdZM4C7uyklFtGIb9OjAPLHowgq0cCB9bL7h86U5FkdejLkC87Uzhm/Fo7 teacher
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6tF03EjeS36CmejN5q+J2zgWtXcIghHQn+JynTPCZn6Ud0HVeVTvRHxYQlHU417CcyOLJpxJDdGwxxxYZdlhNpxgHD80fkAKZyscJjSLgSM67prGCZ7OinnZFiCXSv43vFMin8gAFq623C2nTv0Wyma7l8LyGAtGZ80TbW+m1IBU9NhDq0ZeIK069lTZo2j+Is0RPoGZJMvUqF8gor/Y52C0CItKGEy15MBLLZXhv6qe2sAusxepRe0m3tn6lcagRadaoGXvnf7Z4Ihu8KezxPJGoQIKcmOlorYFEWraGRFD+CuR7Lg3lnFIK8wMw7l++/IExT++w/pOfW35h66by6J5pEv4jYBTiqioTUF/EEetfck/cUcVb9kQPz/qwxWu/WdkgMjComkw3kIVBBBa9vf/JZJphAr7XBCbIBRouDlwsGoyUuyHBGoddyEQN+HmWbAwUb0JSWGWzYIz74/BbvIvTWbagDAYQr4Q3R0J2KA9Cys/Hcrg46xeQCGYiDmU= ISEAG+dennis.buathong@LAPTOP-6QOFDFEA
+ssh_pwauth: true
+disable_root: false
+package_update: true   
+packages:
+  - curl
+  - wget
