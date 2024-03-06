@@ -1,5 +1,5 @@
 # file: requirements.txt
 
-APIFlask==2.1.0
-
-requests==2.31.0
+apiflask==2.1.0
+mysql-connector-python==8.0.32
+flask-sqlalchemy==3.0.3

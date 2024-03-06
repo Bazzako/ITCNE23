@@ -1,68 +1,52 @@
-# file: app.py
-
-from flask import request, jsonify
 from apiflask import APIFlask, Schema
-from apiflask.fields import String, Float
-from apiflask.schemas import EmptySchema
+from apiflask.fields import String, Integer
 from apiflask.validators import Length, OneOf
-import requests
+from flask_sqlalchemy import SQLAlchemy
+import os
+
 app = APIFlask(__name__)
 
+class StudentIn(Schema):
+    name = String(requerement=True, validate=Length(0, 32))
+    level = String(required=True, validate=OneOf(['HF', 'AP', 'PE','ICT']))
 
-class Calculatordata(Schema):
-    a = Float(requered=True)
-    b = Float(requered=True)
-    op = String(required=True, validate=OneOf(['add', 'mul', 'sub','div']))
-
-class Bitcoindata(Schema):
-    currency = String(requered=True, validate=OneOf(['EUR', 'GBP', 'USD']))
-    amount = Float(required=True)
-
-@app.route('/')
-def hello_world():
-    return 'Hello ITCNE! Test Dennis'
-
-
-@app.route('/calculator', methods=["GET"])
-@app.input(Calculatordata, location="query")
-def calc(query_data):
-    # Hole die Parameter a und b aus der Anfrage
-    a = request.args.get("a", type=float)
-    b = request.args.get("b", type=float)
-    op = request.args.get("op", type=str)
-    # Prüfe, ob die Parameter gültig sind
-    if a is None or b is None:
-        return jsonify({"error": "Invalid parameters"})
-    # Führe die Rechenoperation aus
-    if op == "add":
-        result = a + b
-    elif op == "sub":
-        result = a - b
-    elif op == "mul":
-        result = a * b
-    elif op == "div":
-        result = a / b
-    else:
-        return jsonify({"error": "Invalid operation"})
-    # Gib das Ergebnis als JSON zurück
-    return jsonify({"result": result})
-
-
-@app.route('/Bitcoin')
-@app.input(Bitcoindata, location="query")
-def Bitcoin_to_EURO(query_data):
-    # Amount und Currency in Header from Class Bitcoindata
-    amount = query_data["amount"]
-    currency = query_data["currency"]
-
-    # Get Bitcoin Worth
-    bitcoin = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-    if bitcoin.status_code == 200:
-        converstionrate = bitcoin.json()["bpi"][currency]["rate_float"]
-
-
-        result = amount / converstionrate
+class StudentOut(Schema):
+    id = Integer()
+    name = String()
+    level = String()
     
-        return {"result": result}
-    else:
-        return {"Error": "Input not possible"}
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.db')
+
+db = SQLAlchemy(app)
+
+class StudentModel(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(32))
+    level = db.Column(db.String(8))
+
+@app.post('/create_students')
+@app.input(StudentIn, location='json')
+@app.output(StudentOut, status_code=201)
+def create_student(json_data):
+    student = StudentModel(**json_data)
+    db.session.add(student)
+    db.session.commit()
+    return student
+
+@app.get('/get_students/<int:id>')
+@app.output(StudentOut, status_code=201)
+def get_student(id):
+    student = db.get_or_404(StudentModel, id)
+    return student
+
+@app.delete('/delete_students/<int:id>')
+@app.output(StudentOut, status_code=201)
+def delete_student(id):
+    student = db.get_or_404(StudentModel, id)
+    db.session.delete(student)
+    db.session.commit()
+    return student
+
+with app.app_context():
+    db.create_all()
