@@ -1,17 +1,42 @@
-version: '3.1'
+version: '3.9'
 
 services:
-  minimal-flask:
-    container_name: minimal_flask_service
+
+  persistent-flask:
+    container_name: persistent_flask_service
     build:
       context: .
     ports:
       - 5000:5000
+    volumes:
+      - .:/app
     environment:
+      - DATABASE_URI=mysql+mysqlconnector://root:root@msvc-db:3306/msvc
       - CHOKIDAR_USEPOLLING=true
       - FLASK_DEBUG=1
       - FLASK_HOST=0.0.0.0
       - FLASK_PORT=5000
       - FLASK_APP=app
+    depends_on:
+      - msvc-db
+
+  msvc-db:  
+    image: mysql:5.7
+    container_name: msvc-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: msvc
+    ports:
+      - 3306:3306
     volumes:
-      - .:/app
+      - my-db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  my-db:
