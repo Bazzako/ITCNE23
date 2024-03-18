@@ -1,0 +1,62 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRI4IqTl6RNGbOJlpVLT6qSuRa34FqHtdOQaq1vxgTPPDesHMGrTIM2jaS2S6HgKMgW3C8COFXR23SQAcyF2C9G+H4MzTge/dmpFDJh3ram2N7HC/N1tB76W0nA05aQWvDHAHSqqB20pAstxvtq8DteGERCNj6sl9GRKDxwXdAthuRXwq+dM05cq6T7vDki/yMmJUYRmyGBEzKfci6XYBMQ079I/4x33NGGqsK23wFb3khqziCUTRtCwJe7frX9Z1ak2JG9RMdEf4l/5kGjOez0VptMcpdZM4C7uyklFtGIb9OjAPLHowgq0cCB9bL7h86U5FkdejLkC87Uzhm/Fo7 teacher
+ssh_pwauth: true
+disable_root: false
+package_update: true   
+packages:
+  - curl
+  - wget
+  - prometheus
+  - prometheus-node-exporter
+
+write_files:
+  - path: /etc/prometheus/prometheus.yml
+  permissions: '0644'
+  content: |
+    global:
+      scrape_interval: 15s
+    scrape_configs:
+      - job_name: prometheus
+        static_configs:
+          - targets: ['localhost:9090']
+      - job_name: node
+        static_configs:
+          - targets: ['localhost:9100']
+    rule_files:
+      - "/etc/prometheus/rules.yml"
+
+  - path: /etc/prmetheus/rules.yml
+    permissions: '0644'
+    content: |
+      groups
+        - name: custom_rules
+          rules:
+            - record: node_memory_MemFree_percent
+              expr: 100 - (100 * node_memory_MemFree_bytes / node_memory_MemTotal_bytes)
+            - record: node_filesystem_free_percent
+              expr: 100 * node_filesystem_free_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}
+        - name: alert_rules
+          rules:
+            - alert: InstanceDown
+            expr: up == 0
+            for: 1m
+            labels:
+              serverity: critical
+            annotations:
+              summary: "Instance {{ $labels.instance }} down"
+              description: "Instance {{ $labels.instance }} of job {{ $labels.job }} has been down for more tham 1 minute. "
+              
+
+runcmd:
+- sudo systemctl enable prometheus.service
+- sudo systemctl start prometheus.service
+- sudo systemctl enable prometheus-node-exporter.service
+- sudo systemctl start prometheus-node-exporter.service
+- sudo systemctl restart prometheus
