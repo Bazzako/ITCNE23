@@ -1,0 +1,6 @@
+Im Gitbash
+
+cd .ssh
+
+ssh -i "mscv-key.pem" ec2-user@44.221.164.235 (IP ist elastisch)
+
