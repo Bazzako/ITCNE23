@@ -1,0 +1,30 @@
+deploy-job:
+    stage: deploy
+    image: alpine
+    before_script:
+        # install envsubst and ssh-add
+        - apk add gettext openssh-client
+    script:
+        # start ssh-agent and import ssh private key
+        - eval `ssh-agent`
+        - ssh-add <(echo "$SSH_PRIVATE_KEY")
+        # add server to list of known hosts
+        - mkdir -p ~/.ssh
+        - chmod 700 ~/.ssh
+        - touch ~/.ssh/known_hosts
+        - chmod 600 ~/.ssh/known_hosts
+        - echo $SSH_HOST_KEY >> ~/.ssh/known_hosts
+        - echo "HOST *" > ~/.ssh/config
+        - echo "StrictHostKeyChecking no" >> ~/.ssh/config
+        # upload docker-compose file to the server
+        - scp compose.prod.yaml msvc@$DEPLOY_TARGET:/home/msvc/compose.yaml
+        # copy production nginx config to server
+        - ssh msvc@$DEPLOY_TARGET 'mkdir -p /home/msvc/user_conf.d'
+        - scp ./ma-proxy/nginx-proxy.prod.conf msvc@$DEPLOY_TARGET:/home/msvc/user_conf.d/server.conf
+        # pull newest images from registry and start them
+        - ssh msvc@$DEPLOY_TARGET "cd /home/msvc; 
+            docker compose up -d"
+    rules:
+        # only deploy if new commit on main-branch
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+

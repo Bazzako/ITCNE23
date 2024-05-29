@@ -1,0 +1,6 @@
+[submodule "ma-backend"]
+	path = ma-backend
+	url = git@gitlab.com:ch-tbz-wb/TE/modules/msvc/mikro-adventures/ma-backend.git
+[submodule "ma-frontend"]
+	path = ma-frontend
+	url = git@gitlab.com:ch-tbz-wb/TE/modules/msvc/mikro-adventures/ma-frontend.git
