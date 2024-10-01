@@ -1,0 +1,23 @@
+Host cn
+    HostName 10.0.22.14
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/cnc-lernkey
+
+Host w1
+    HostName 10.0.22.15
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/cnc-lernkey
+
+Host w2
+    HostName 10.0.22.4
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/cnc-lernkey
+
+Host w3
+    HostName 10.0.22.10
+    User ubuntu
+    Port 22
+    IdentityFile ~/.ssh/cnc-lernkey
