@@ -2,4 +2,4 @@ build website:
     image: node
     script:
           - yarn install
-          - yarn build
+ 
