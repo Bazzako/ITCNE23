@@ -1,0 +1,12 @@
+kind create cluster --name capi-mgmt --config kind-cluster-with-extramounts.yaml
+
+clusterctl init
+
+clusterctl init --infrastructure docker
+
+kubectl apply -f simple-cluster.yaml
+
+helm repo add cilium https://helm.cilium.io/
+helm install cilium cilium/cilium --kubeconfig=kubeconfig-workload --namespace kube-system
+
+kubectl --kubeconfig=kubeconfig-workload create deployment nginx --image=nginx
